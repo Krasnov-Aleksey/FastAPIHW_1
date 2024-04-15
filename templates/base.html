@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+<h1>FastAPI Home Work</h1>
+<h2>Список пользователей</h2>
+{% for user in users %}
+<p> id "{{user.id}}" Имя "{{user.name}}" Email "{{user.email}}" Пароль "{{user.password}}"</p>
+{% endfor %}
+<form action="user" method="post">
+    <input name="id" type="number" required placeholder="Введите id"><br>
+    <input name="name" type="text" required placeholder="Введите имя"><br>
+    <input name="email" type="email" placeholder="Введите email"><br>
+    <input name="password" type="password" required placeholder="Введите пароль"><br>
+    <button type="submit">Добавить пользователя</button>
+</form>
+</body>
+</html>
